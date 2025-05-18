@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Profile - Sportex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/sprtxlg.jpg" alt="Sportex Logo">
+            <span>SPORTEX</span>
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Search products...">
+        </div>
+        <div class="user-actions">
+            <a href="account-profile.html"><i class="fas fa-user"></i> Account</a>
+            <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Customer Support</a></li>
+            <li><a href="policies.html">Policies</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-layout">
+        <aside class="sidebar-nav">
+            <h2>ACCOUNT</h2>
+            <ul>
+                <li><a href="account-profile.html">PROFILE ></a></li>
+                <li><a href="account-orders.html">ORDERS ></a></li>
+                <li><a href="login.html">LOG OUT ></a></li>
+            </ul>
+        </aside>
+        <section class="main-content">
+            <form class="account-form">
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h3>Shipping Address</h3>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    <div class="address-fields">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                        <div class="form-group">
+                            <label for="zipcode">Zipcode</label>
+                            <input type="text" id="zipcode" name="zipcode">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+
+                <ul>
+                    <li><a href="index.html">• Home</a></li>
+                    <li><a href="product.html">• Shop</a></li>
+                    <li><a href="about.html">• About us</a></li>
+                    <li><a href="support.html">• Customer Support</a></li>
+                    <li><a href="policies.html">• Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: support@sportex.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: Lagro, Quezon City</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">• Facebook</a></li>
+                    <li><a href="#">• Instagram</a></li>
+                    <li><a href="#">• Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Sportex. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

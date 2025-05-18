@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies - Sportex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/sprtxlg.jpg" alt="Sportex Logo">
+            <span>SPORTEX</span>
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Search products...">
+        </div>
+        <div class="user-actions">
+            <a href="account-profile.html"><i class="fas fa-user"></i> Account</a>
+            <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Customer Support</a></li>
+            <li><a href="policies.html" class="active">Policies</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-layout">
+        <aside class="sidebar-nav">
+            <h2>Policies</h2>
+            <ul>
+                <li><a href="#privacy-policy" class="active">Privacy & Policy ></a></li>
+                <li><a href="#terms-condition">Terms & Condition ></a></li>
+                <li><a href="#warranty-returns">Warranty & Returns Policy ></a></li>
+            </ul>
+        </aside>
+
+        <section class="main-content">
+            <div id="privacy-policy">
+                <h2 id="policyy">Privacy & Policy</h2>
+                <p>At <strong>SPORTEX</strong>, your privacy matters. We collect only the necessary information required
+                    to process your orders, improve your shopping experience, and keep you updated only if you opt in.
+                    We never sell, trade, or share your personal data with third parties, except when required to
+                    fulfill your order or comply with legal obligations. We use advanced encryption and security
+                    protocols to keep your information safe.</p>
+            </div>
+
+            <div id="terms-condition" style="display: none;">
+                <h2>Terms & Condition</h2>
+                <p>By using our website, you agree to abide by our terms and conditions. These include:</p>
+                <ul>
+                    <li>Providing <strong>accurate, current information</strong></li>
+                    <li>Using our products <strong>responsibly</strong></li>
+                    <li>Acknowledging that <strong>pricing and availability</strong> may change at any time</li>
+                </ul>
+                <p>We reserve the right to update these terms as necessary. Please review them periodically to stay
+                    informed.</p>
+            </div>
+
+            <div id="warranty-returns" class="button" style="display: none;">
+                <h2>Warranty & Returns Policy</h2>
+                <p>We stand by every product we sell. Most items are backed by a <strong>30-day return policy</strong>.
+                    If your item is defective or arrives damaged, we'll replace it or offer a <strong>full
+                        refund</strong> no hassle.</p>
+                <p>To be eligible for a return or warranty claim, items must be <strong>unused</strong> and in their
+                    <strong>original packaging</strong>. Hygiene-sensitive items (such as worn apparel or used mats) may
+                    not be returnable. For full details, check our <strong>Returns & Refund</strong> page or contact
+                    customer service.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+
+                <ul>
+                    <li><a href="index.html">• Home</a></li>
+                    <li><a href="product.html">• Shop</a></li>
+                    <li><a href="about.html">• About us</a></li>
+                    <li><a href="support.html">• Customer Support</a></li>
+                    <li><a href="policies.html">• Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: support@sportex.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: Lagro, Quezon City</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">• Facebook</a></li>
+                    <li><a href="#">• Instagram</a></li>
+                    <li><a href="#">• Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Sportex. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+        const contentSections = document.querySelectorAll('.main-content > div[id]');
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+
+                sidebarLinks.forEach(l => l.classList.remove('active'));
+                contentSections.forEach(s => s.style.display = 'none');
+
+
+                this.classList.add('active');
+
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                }
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const activeLink = document.querySelector('.sidebar-nav a.active');
+            if (activeLink) {
+                const targetId = activeLink.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    contentSections.forEach(s => s.style.display = 'none');
+                    targetSection.style.display = 'block';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

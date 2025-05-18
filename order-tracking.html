@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking - Sportex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/sprtxlg.jpg" alt="Sportex Logo">
+            <span>SPORTEX</span>
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Search products...">
+        </div>
+        <div class="user-actions">
+            <a href="account-profile.html"><i class="fas fa-user"></i> Account</a>
+            <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Customer Support</a></li>
+            <li><a href="policies.html">Policies</a></li>
+        </ul>
+    </nav>
+
+    <main class="order-tracking-page">
+        <h1>Order Tracking</h1>
+
+        <div class="tracking-container">
+            <div class="tracking-product-info">
+                <img src="images/bs/pushupboard.jpg" alt="Push Up Board">
+                <h3>Push Up Board</h3>
+                <p>Quantity: 1</p>
+                <p class="price">₱1,200</p>
+            </div>
+
+            <div class="tracking-status">
+                <!-- Step 1: Ordered -->
+                <div class="status-step completed">
+                    <div class="status-icon"><i class="fas fa-check"></i></div>
+                    <div class="status-text">
+                        <h4>ORDERED</h4>
+                        <p>Your order has been confirmed</p>
+
+                    </div>
+                </div>
+
+                <!-- Step 2: Shipped -->
+                <div class="status-step completed">
+                    <div class="status-icon"><i class="fas fa-truck"></i></div>
+                    <div class="status-text">
+                        <h4>SHIPPED</h4>
+                        <p>Your order is on the way</p>
+
+                    </div>
+                </div>
+
+                <!-- Step 3: Delivered -->
+                <div class="status-step">
+                    <div class="status-icon"><i class="fas fa-box-open"></i></div>
+                    <div class="status-text">
+                        <h4>DELIVERED</h4>
+                        <p>Your order has been delivered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+
+                <ul>
+                    <li><a href="index.html">• Home</a></li>
+                    <li><a href="product.html">• Shop</a></li>
+                    <li><a href="about.html">• About us</a></li>
+                    <li><a href="support.html">• Customer Support</a></li>
+                    <li><a href="policies.html">• Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: support@sportex.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: Lagro, Quezon City</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">• Facebook</a></li>
+                    <li><a href="#">• Instagram</a></li>
+                    <li><a href="#">• Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Sportex. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

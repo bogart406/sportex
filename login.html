@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sportex</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-container">
+        <h1>Login</h1>
+        <p class="subtitle">Sign in to continue</p>
+
+        <form id="loginForm" class="auth-form">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <script>
+            document.getElementById("loginForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent actual form submission
+                // You can add validation or fake login checks here
+                window.location.href = "index.html"; // Redirect
+            });
+        </script>
+
+        <p class="switch-auth">
+            Don't have an account? <a href="register.html">Register</a>
+        </p>
+    </div>
+
+</body>
+
+</html>

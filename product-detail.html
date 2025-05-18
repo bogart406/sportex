@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Sportex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+        }
+
+        .product-detail-layout {
+            display: flex;
+            gap: 40px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .product-image-column {
+            flex: 0 0 300px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: white;
+        }
+
+        .product-image-column img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .product-info-column {
+            flex: 1;
+            padding: 20px;
+            background: white;
+        }
+
+        .product-info-column h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            margin: 10px 0;
+        }
+
+        .description {
+            color: black;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .quantity-selector label {
+            color: black;
+        }
+
+        .quantity-selector button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            color: black;
+        }
+
+        .quantity-selector input {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid #ddd;
+            color: black;
+            background: white;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .add-to-cart-btn {
+            padding: 10px 20px;
+            background-color: #c8ff00;
+            border: none;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .wishlist-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+        }
+
+        .wishlist-btn.active {
+            background-color: #ffebee;
+            border-color: #ff4444;
+        }
+
+        .wishlist-btn.active i {
+            color: red;
+        }
+
+        .you-may-also-like {
+            margin-top: 40px;
+            padding: 20px;
+            background: white;
+        }
+
+        .you-may-also-like h2 {
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background: white;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            background: white;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: black;
+        }
+
+        .product-card .price {
+            font-size: 18px;
+            color: black;
+            margin: 10px 0;
+        }
+
+        .product-card .add-to-cart-btn {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            background-color: #c8ff00;
+            color: black;
+        }
+
+        nav ul li a {
+            color: black;
+        }
+
+        footer {
+            background: white;
+            color: black;
+        }
+
+        footer a {
+            color: black;
+        }
+
+        .footer-column h4 {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/sprtxlg.jpg" alt="Sportex Logo">
+            <span>SPORTEX</span>
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Search products...">
+        </div>
+        <div class="user-actions">
+            <a href="account-profile.html"><i class="fas fa-user"></i> Account</a>
+            <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html" class="active">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Customer Support</a></li>
+            <li><a href="policies.html">Policies</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="product-detail-layout">
+            <div class="product-image-column">
+                <img id="product-image" src="" alt="Product Image">
+            </div>
+            <div class="product-info-column">
+                <h1 id="product-name"></h1>
+                <p id="product-price" class="price"></p>
+                <p id="product-description" class="description"></p>
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+                    <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                </div>
+                <div class="product-actions">
+                    <button class="add-to-cart-btn" onclick="addToCartFromDetail()">Add to Cart</button>
+                    <button class="wishlist-btn" title="Add to Wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="you-may-also-like">
+            <h2>You May Also Like</h2>
+            <div class="product-grid">
+                <article class="product-card" onclick="viewProduct('Hex Dumbbell 25 lbs', 'images/tn/Toby_s Sports Rubber Hex Dumbbell 25 lbs_.jpg', '₱1,500', 'Professional hex dumbbell for strength training')">
+                    <img src="images/tn/Toby_s Sports Rubber Hex Dumbbell 25 lbs_.jpg" alt="Hex Dumbbell 25 lbs">
+                    <h3>Hex Dumbbell 25 lbs</h3>
+                    <p class="price">₱1,500</p>
+                    <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart('Hex Dumbbell 25 lbs', '₱1,500', 'images/tn/Toby_s Sports Rubber Hex Dumbbell 25 lbs_.jpg')">Add to Cart</button>
+                </article>
+                <article class="product-card" onclick="viewProduct('Dumbbell 1kg (Pair)', 'images/tn/Reebok RAWT-18001 Coated Dumbbell - Grey - 1kg (Pair)_.jpg', '₱1,000', 'Professional coated dumbbell pair')">
+                    <img src="images/tn/Reebok RAWT-18001 Coated Dumbbell - Grey - 1kg (Pair)_.jpg" alt="Dumbbell 1kg (Pair)">
+                    <h3>Dumbbell 1kg (Pair)</h3>
+                    <p class="price">₱1,000</p>
+                    <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart('Dumbbell 1kg (Pair)', '₱1,000', 'images/tn/Reebok RAWT-18001 Coated Dumbbell - Grey - 1kg (Pair)_.jpg')">Add to Cart</button>
+                </article>
+                <article class="product-card" onclick="viewProduct('Dumbbell Set', 'images/tn/Reebok RAWT-11156 Dumbbell Set with Case (Grey)_.jpg', '₱4,600', 'Professional dumbbell set with carrying case')">
+                    <img src="images/tn/Reebok RAWT-11156 Dumbbell Set with Case (Grey)_.jpg" alt="Dumbbell Set">
+                    <h3>Dumbbell Set</h3>
+                    <p class="price">₱4,600</p>
+                    <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart('Dumbbell Set', '₱4,600', 'images/tn/Reebok RAWT-11156 Dumbbell Set with Case (Grey)_.jpg')">Add to Cart</button>
+                </article>
+                <article class="product-card" onclick="viewProduct('Barbell Plate 20 lbs', 'images/tn/20lbsplate.jpg', '₱499', 'Professional weight plate for barbell training')">
+                    <img src="images/tn/20lbsplate.jpg" alt="Barbell Plate 20 lbs">
+                    <h3>Barbell Plate 20 lbs</h3>
+                    <p class="price">₱499</p>
+                    <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart('Barbell Plate 20 lbs', '₱499', 'images/tn/20lbsplate.jpg')">Add to Cart</button>
+                </article>
+                <article class="product-card" onclick="viewProduct('Curl Bar', 'images/tn/curlbar.jpg', '₱599', 'Professional curl bar for bicep training')">
+                    <img src="images/tn/curlbar.jpg" alt="Curl Bar">
+                    <h3>Curl Bar</h3>
+                    <p class="price">₱599</p>
+                    <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart('Curl Bar', '₱599', 'images/tn/curlbar.jpg')">Add to Cart</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <ul>
+                    <li><a href="index.html">• Home</a></li>
+                    <li><a href="product.html">• Shop</a></li>
+                    <li><a href="about.html">• About us</a></li>
+                    <li><a href="support.html">• Customer Support</a></li>
+                    <li><a href="policies.html">• Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: support@sportex.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: Lagro, Quezon City</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">• Facebook</a></li>
+                    <li><a href="#">• Instagram</a></li>
+                    <li><a href="#">• Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Sportex. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script>
+        // Load product details when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the selected product from localStorage
+            const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+            
+            if (selectedProduct) {
+                // Update the page title
+                document.title = `${selectedProduct.name} - Sportex`;
+                
+                // Update the product details
+                document.getElementById('product-image').src = selectedProduct.image;
+                document.getElementById('product-image').alt = selectedProduct.name;
+                document.getElementById('product-name').textContent = selectedProduct.name;
+                document.getElementById('product-price').textContent = selectedProduct.price;
+                document.getElementById('product-description').textContent = selectedProduct.description;
+
+                // Check if product is in wishlist
+                const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+                const isInWishlist = wishlist.some(item => item.name === selectedProduct.name);
+                const wishlistBtn = document.querySelector('.wishlist-btn');
+                
+                if (isInWishlist) {
+                    wishlistBtn.classList.add('active');
+                    wishlistBtn.innerHTML = '<i class="fas fa-heart"></i>';
+                } else {
+                    wishlistBtn.classList.remove('active');
+                    wishlistBtn.innerHTML = '<i class="far fa-heart"></i>';
+                }
+
+                // Add wishlist button click handler
+                wishlistBtn.onclick = function() {
+                    toggleWishlist(selectedProduct.name, selectedProduct.price, selectedProduct.image, this);
+                };
+            } else {
+                // Redirect to products page if no product was selected
+                window.location.href = 'product.html';
+            }
+        });
+
+        // Function to add the product to cart from detail page
+        function addToCartFromDetail() {
+            const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+            const quantity = parseInt(document.getElementById('quantity').value);
+            
+            if (selectedProduct) {
+                // Get existing cart items or initialize empty array
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                // Add new item to cart with selected quantity
+                cart.push({
+                    name: selectedProduct.name,
+                    price: selectedProduct.price,
+                    image: selectedProduct.image,
+                    quantity: quantity
+                });
+
+                // Save updated cart
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                // Show confirmation message
+                alert('Product added to cart!');
+            }
+        }
+
+        // Function to toggle wishlist
+        function toggleWishlist(name, price, image, btn) {
+            // Get existing wishlist or initialize empty array
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            
+            // Check if item is already in wishlist
+            const index = wishlist.findIndex(item => item.name === name);
+            
+            if (index === -1) {
+                // Add to wishlist
+                wishlist.push({
+                    name: name,
+                    price: price,
+                    image: image
+                });
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="fas fa-heart"></i>';
+                alert('Added to wishlist!');
+            } else {
+                // Remove from wishlist
+                wishlist.splice(index, 1);
+                btn.classList.remove('active');
+                btn.innerHTML = '<i class="far fa-heart"></i>';
+            }
+            
+            // Save updated wishlist
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        }
+
+        // Function to view a product from the "You May Also Like" section
+        function viewProduct(name, image, price, description) {
+            const product = { name, image, price, description };
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+            window.location.href = 'product-detail.html';
+        }
+
+        // Function to add a product to cart from the "You May Also Like" section
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({
+                name: name,
+                price: price,
+                image: image,
+                quantity: 1
+            });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Product added to cart!');
+        }
+    </script>
+</body>
+
+</html>

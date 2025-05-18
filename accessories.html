@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportex - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/sprtxlg.jpg" alt="Sportex Logo">
+            <span>SPORTEX</span>
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Search products...">
+        </div>
+        <div class="user-actions">
+            <a href="account-profile.html"><i class="fas fa-user"></i> Account</a>
+            <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html" class="active">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Customer Support</a></li>
+            <li><a href="policies.html">Policies</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="products-hero">
+            <h1>Products</h1>
+            <p>Browse our collection of fitness equipment, sports gear, and accessories</p>
+        </section>
+
+
+        <div class="category-filters">
+            <button onclick="location.href='product.html'">Fitness Equipments</button>
+            <button onclick="location.href='sportsgear.html'">Sports Gear</button>
+            <button onclick="location.href='accessories.html'" class="active">Accessories</button>
+        </div>
+
+
+        <!-- Product List Section -->
+        <section class="product-list">
+            <div class="product-grid">
+                <article class="product-card" data-description="Lightweight drawstring backpack for sports and gym">
+                    <img src="images/PRODUCTS/ACCESSORIES/Drawstring Backpack Bag Sport Gym Sackpack_.jpg"
+                        alt="Drawstring Bag">
+                    <h3>Drawstring Bag</h3>
+                    <p class="price">₱300</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Drawstring Bag', '₱300', 'images/PRODUCTS/ACCESSORIES/Drawstring Backpack Bag Sport Gym Sackpack_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Water-resistant drawstring bag with side pocket">
+                    <img src="images/PRODUCTS/ACCESSORIES/Drawstring Backpack Water Resistant String Bag Sports Gym Sack with Side Pocket_.jpg"
+                        alt="Waterproof Drawstring Bag">
+                    <h3>Waterproof Drawstring Bag</h3>
+                    <p class="price">₱750</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Waterproof Drawstring Bag', '₱750', 'images/PRODUCTS/ACCESSORIES/Drawstring Backpack Water Resistant String Bag Sports Gym Sack with Side Pocket_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional gym bag for men and women">
+                    <img src="images/PRODUCTS/ACCESSORIES/HOTOR Gym Bag for Men and Women_.jpg" alt="Gym Bag">
+                    <h3>Gym Bag</h3>
+                    <p class="price">₱1,500</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Gym Bag', '₱1,500', 'images/PRODUCTS/ACCESSORIES/HOTOR Gym Bag for Men and Women_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional fitness duffel bag for workout">
+                    <img src="images/PRODUCTS/ACCESSORIES/Dr. Swag Fit Duffel Bag, Fitness Workout Gym Bag for Men & Women_.jpg"
+                        alt="Dr. Swag Duffel Bag">
+                    <h3>Dr. Swag Duffel Bag</h3>
+                    <p class="price">₱1,800</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Dr. Swag Duffel Bag', '₱1,800', 'images/PRODUCTS/ACCESSORIES/Dr. Swag Fit Duffel Bag, Fitness Workout Gym Bag for Men & Women_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Advanced fitness tracker with continuous monitoring">
+                    <img src="images/PRODUCTS/ACCESSORIES/Fitness & Activity Tracker – Continuous Monitoring_.webp"
+                        alt="Fitness Tracker">
+                    <h3>Fitness Tracker</h3>
+                    <p class="price">₱1,500</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Fitness Tracker', '₱1,500', 'images/PRODUCTS/ACCESSORIES/Fitness & Activity Tracker – Continuous Monitoring_.webp')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card"
+                    data-description="Smart watch with Alexa integration and 1.8-inch LCD screen">
+                    <img src="images/PRODUCTS/ACCESSORIES/Smart Watches for Women, Alexa Built-in Fitness Watch with 1.8_ LCD Screen & Bluetooth Call_.jpg"
+                        alt="Smartwatch w/ Alexa">
+                    <h3>Smartwatch w/ Alexa</h3>
+                    <p class="price">₱2,000</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Smartwatch w/ Alexa', '₱2,000', 'images/PRODUCTS/ACCESSORIES/Smart Watches for Women, Alexa Built-in Fitness Watch with 1.8_ LCD Screen & Bluetooth Call_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card"
+                    data-description="Comprehensive health tracker with stress management and sleep tracking">
+                    <img src="images/PRODUCTS/ACCESSORIES/fitnesstracker.jpg" alt="Health Tracker">
+                    <h3>Health Tracker</h3>
+                    <p class="price">₱1,800</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Health Tracker', '₱1,800', 'images/PRODUCTS/ACCESSORIES/Health &-Fitness-Tracker with Stress Management, Workout Intensity, Sleep Tracking, 24_7 Heart Rate and more, Midnight Zen_Black One Size _.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card"
+                    data-description="Bluetooth heart rate monitor armband for accurate tracking">
+                    <img src="images/PRODUCTS/ACCESSORIES/Bluetooth Heart Rate Monitor Armband_.jpg" alt="HR Armband">
+                    <h3>HR Armband</h3>
+                    <p class="price">₱1,200</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('HR Armband', '₱1,200', 'images/PRODUCTS/ACCESSORIES/Bluetooth Heart Rate Monitor Armband_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Smart fitness watch with advanced tracking features">
+                    <img src="images/PRODUCTS/ACCESSORIES/Smart Watches for Men Women Fitness_ Fitness Tracker_.webp"
+                        alt="Fitness Smartwatch">
+                    <h3>Fitness Smartwatch</h3>
+                    <p class="price">₱1,500</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Fitness Smartwatch', '₱1,500', 'images/PRODUCTS/ACCESSORIES/Smart Watches for Men Women Fitness_ Fitness Tracker_.webp')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="32-ounce squeeze water bottle for hydration">
+                    <img src="images/PRODUCTS/ACCESSORIES/Squeeze Water Bottles, 32 oz_.jpg" alt="32oz Bottle">
+                    <h3>32oz Bottle</h3>
+                    <p class="price">₱250</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('32oz Bottle', '₱250', 'images/PRODUCTS/ACCESSORIES/Squeeze Water Bottles, 32 oz_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="1-liter water bottle with convenient straw">
+                    <img src="images/PRODUCTS/ACCESSORIES/1 Liter Water Bottle with Straw_.webp" alt="1L Straw Bottle">
+                    <h3>1L Straw Bottle</h3>
+                    <p class="price">₱300</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('1L Straw Bottle', '₱300', 'images/PRODUCTS/ACCESSORIES/1 Liter Water Bottle with Straw_.webp')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional polarized sports sunglasses">
+                    <img src="images/PRODUCTS/ACCESSORIES/Polarized Sports Sunglasses for Men Women_.jpg"
+                        alt="Polarized Shades">
+                    <h3>Polarized Shades</h3>
+                    <p class="price">₱1,000</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Polarized Shades', '₱1,000', 'images/PRODUCTS/ACCESSORIES/Polarized Sports Sunglasses for Men Women_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card"
+                    data-description="TR90 polarized sports sunglasses for various activities">
+                    <img src="images/PRODUCTS/ACCESSORIES/Polarized Sports Sunglasses for Men Women Running Cycling Fishing Golf Driving Shades Sun Glasses Tr90_.jpg"
+                        alt="TRS Sunglasses">
+                    <h3>TRS Sunglasses</h3>
+                    <p class="price">₱1,100</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('TRS Sunglasses', '₱1,100', 'images/PRODUCTS/ACCESSORIES/Polarized Sports Sunglasses for Men Women Running Cycling Fishing Golf Driving Shades Sun Glasses Tr90_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Comfortable running headband for men">
+                    <img src="images/PRODUCTS/ACCESSORIES/Mens Running Headband_.jpg" alt="Running Headband">
+                    <h3>Running Headband</h3>
+                    <p class="price">₱245</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Running Headband', '₱245', 'images/PRODUCTS/ACCESSORIES/Mens Running Headband_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Universal bicycle phone holder case">
+                    <img src="images/PRODUCTS/ACCESSORIES/West-Biking-Universal-Bicycle-Case-Bike-Holder-6-5-27082020-01-p.jpg"
+                        alt="Bike Phone Holder">
+                    <h3>Bike Phone Holder</h3>
+                    <p class="price">₱399</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Bike Phone Holder', '₱399', 'images/PRODUCTS/ACCESSORIES/West-Biking-Universal-Bicycle-Case-Bike-Holder-6-5-27082020-01-p.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Convenient phone arm bag for workouts">
+                    <img src="images/PRODUCTS/ACCESSORIES/61sM+sdI5BL._AC_SL1200_.jpg" alt="Phone Arm Bag">
+                    <h3>Phone Arm Bag</h3>
+                    <p class="price">₱350</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Phone Arm Bag', '₱350', 'images/PRODUCTS/ACCESSORIES/61sM+sdI5BL._AC_SL1200_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional fitness scale for body composition">
+                    <img src="images/PRODUCTS/ACCESSORIES/index-2-black-cf-lg.jpg" alt="Fitness Scale">
+                    <h3>Fitness Scale</h3>
+                    <p class="price">₱4,288</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Fitness Scale', '₱4,288', 'images/PRODUCTS/ACCESSORIES/index-2-black-cf-lg.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Adjustable hand grip for strength training">
+                    <img src="images/PRODUCTS/ACCESSORIES/adjustable-handgrip-8-40-kg-corength-8517609.jpg"
+                        alt="Adjustable Hand Grip">
+                    <h3>Adjustable Hand Grip</h3>
+                    <p class="price">₱350</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Adjustable Hand Grip', '₱350', 'images/PRODUCTS/ACCESSORIES/adjustable-handgrip-8-40-kg-corength-8517609.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional wrist weights for training">
+                    <img src="images/PRODUCTS/ACCESSORIES/51Sh2tzTe2L._AC_UF894,1000_QL80_.jpg" alt="Wrist Weights">
+                    <h3>Wrist Weights</h3>
+                    <p class="price">₱350</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Wrist Weights', '₱350', 'images/PRODUCTS/ACCESSORIES/51Sh2tzTe2L._AC_UF894,1000_QL80_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Smart fitness ring with blood oxygen monitoring">
+                    <img src="images/PRODUCTS/ACCESSORIES/Customization-Wearable-Blood-Oxygen-Waterproof-Fitness-Tracker-Health-Smart-Ring-for-Phone-Smart-Accessories-Health-Rings.webp"
+                        alt="Fitness Ring">
+                    <h3>Fitness Ring</h3>
+                    <p class="price">₱1,465</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Fitness Ring', '₱1,465', 'images/PRODUCTS/ACCESSORIES/Customization-Wearable-Blood-Oxygen-Waterproof-Fitness-Tracker-Health-Smart-Ring-for-Phone-Smart-Accessories-Health-Rings.webp')">Add
+                        to Cart</button>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+
+                <ul>
+                    <li><a href="index.html">• Home</a></li>
+                    <li><a href="product.html">• Shop</a></li>
+                    <li><a href="about.html">• About us</a></li>
+                    <li><a href="support.html">• Customer Support</a></li>
+                    <li><a href="policies.html">• Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: support@sportex.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: Lagro, Quezon City</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">• Facebook</a></li>
+                    <li><a href="#">• Instagram</a></li>
+                    <li><a href="#">• Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Sportex. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script>
+        // Function to handle product viewing
+        function viewProduct(name, image, price, description) {
+            // Store product details in localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify({
+                name: name,
+                image: image,
+                price: price,
+                description: description
+            }));
+
+            // Redirect to product detail page
+            window.location.href = 'product-detail.html';
+        }
+
+        // Function to handle adding products to cart
+        function addToCart(name, price, image) {
+            // Get existing cart items or initialize empty array
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add new item to cart
+            cart.push({
+                name: name,
+                price: price,
+                image: image,
+                quantity: 1
+            });
+
+            // Save updated cart
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Show confirmation message
+            alert('Product added to cart!');
+        }
+
+        // Add click event listeners to all product cards
+        document.addEventListener('DOMContentLoaded', function () {
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                card.addEventListener('click', function (e) {
+                    // Don't trigger if clicking the add to cart button
+                    if (e.target.classList.contains('add-to-cart-btn')) {
+                        return;
+                    }
+
+                    const name = this.querySelector('h3').textContent;
+                    const image = this.querySelector('img').src;
+                    const price = this.querySelector('.price').textContent;
+                    const description = this.getAttribute('data-description');
+
+                    viewProduct(name, image, price, description);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

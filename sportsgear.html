@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportex - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/sprtxlg.jpg" alt="Sportex Logo">
+            <span>SPORTEX</span>
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Search products...">
+        </div>
+        <div class="user-actions">
+            <a href="account-profile.html"><i class="fas fa-user"></i> Account</a>
+            <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html" class="active">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Customer Support</a></li>
+            <li><a href="policies.html">Policies</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="products-hero">
+            <h1>Products</h1>
+            <p>Browse our collection of fitness equipment, sports gear, and accessories</p>
+        </section>
+
+
+        <div class="category-filters">
+            <button onclick="location.href='product.html'">Fitness Equipments</button>
+            <button onclick="location.href='sportsgear.html'" class="active">Sports Gear</button>
+            <button onclick="location.href='accessories.html'">Accessories</button>
+        </div>
+
+
+        <!-- Product List Section -->
+        <section class="product-list">
+            <div class="product-grid">
+                <article class="product-card"
+                    data-description="Professional cycling jersey with 3+1 rear zipper pockets">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Men_s Cycling Jersey with 3+1 Rear Zipper Pockets Long Sleev_.jpg"
+                        alt="Men's Cycling Jersey">
+                    <h3>Men's Cycling Jersey</h3>
+                    <p class="price">₱3,000</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Men\'s Cycling Jersey', '₱3,000', 'images/PRODUCTS/SPORTS GEAR/Men_s Cycling Jersey with 3+1 Rear Zipper Pockets Long Sleev_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional silicone swim cap for swimming">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Speedo Swim Cap Silicone_.jpg" alt="Swim Cap">
+                    <h3>Swim Cap</h3>
+                    <p class="price">₱549</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Swim Cap', '₱549', 'images/PRODUCTS/SPORTS GEAR/Speedo Swim Cap Silicone_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card"
+                    data-description="Complete snorkeling set for kids with diving mask and snorkel">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Kids Snorkel Set for Age 5-15 Dry Top Snorkeling Gear for Kids, Diving Mask and Snorkel Set Swimming Goggles with Nose Cover for Kids Youth Boys Girls Junior_.jpg"
+                        alt="Kids Snorkel Set">
+                    <h3>Kids Snorkel Set</h3>
+                    <p class="price">₱1,500</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Kids Snorkel Set', '₱1,500', 'images/PRODUCTS/SPORTS GEAR/Kids Snorkel Set for Age 5-15 Dry Top Snorkeling Gear for Kids, Diving Mask and Snorkel Set Swimming Goggles with Nose Cover for Kids Youth Boys Girls Junior_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional compression running shirt for women">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Women_s Compression Shirt Running Athletic T-Shirts_.jpg"
+                        alt="Woman's Drifit Shirt">
+                    <h3>Woman's Drifit Shirt</h3>
+                    <p class="price">₱250</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Woman\'s Drifit Shirt', '₱250', 'images/PRODUCTS/SPORTS GEAR/Women_s Compression Shirt Running Athletic T-Shirts_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional snorkeling set for adults">
+                    <img src="images/PRODUCTS/SPORTS GEAR/snork.jpg" alt="Snorkel Set">
+                    <h3>Snorkel Set</h3>
+                    <p class="price">₱2,999</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Snorkel Set', '₱2,999', 'images/PRODUCTS/SPORTS GEAR/snork.jpg')">Add to
+                        Cart</button>
+                </article>
+                <article class="product-card"
+                    data-description="Lightweight mesh running shorts for athletic activities">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Athletic Basketball Shorts Workout Gym Quick Dry Shorts Lightweight Mesh Running Shorts Tennis_.jpg"
+                        alt="Dry Shorts">
+                    <h3>Dry Shorts</h3>
+                    <p class="price">₱199</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Dry Shorts', '₱199', 'images/PRODUCTS/SPORTS GEAR/Athletic Basketball Shorts Workout Gym Quick Dry Shorts Lightweight Mesh Running Shorts Tennis_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional arm sleeves for sports activities">
+                    <img src="images/PRODUCTS/SPORTS GEAR/8000000196-Arm-Sleeve-SG-130.jpg" alt="Arm Sleeves">
+                    <h3>Arm Sleeves</h3>
+                    <p class="price">₱200</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Arm Sleeves', '₱200', 'images/PRODUCTS/SPORTS GEAR/8000000196-Arm-Sleeve-SG-130.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional padded sliding shorts with cup pocket">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Youper Adult Elite Compression Padded Sliding Shorts w_Cup Pocket for Baseball, Football_.jpg"
+                        alt="Padded Shorts">
+                    <h3>Padded Shorts</h3>
+                    <p class="price">₱1,500</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Padded Shorts', '₱1,500', 'images/PRODUCTS/SPORTS GEAR/Youper Adult Elite Compression Padded Sliding Shorts w_Cup Pocket for Baseball, Football_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional long sleeve compression shirt">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Long Sleeve Compression Shirts_.jpg"
+                        alt="Long Sleeve Drifit Shirt">
+                    <h3>Long Sleeve Drifit Shirt</h3>
+                    <p class="price">₱800</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Long Sleeve Drifit Shirt', '₱800', 'images/PRODUCTS/SPORTS GEAR/Long Sleeve Compression Shirts_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Ultra-thin knee sleeve for knee pain relief">
+                    <img src="images/PRODUCTS/SPORTS GEAR/ultra-thin Knee Sleeve for Knee Pain_.webp" alt="Knee Sleeve">
+                    <h3>Knee Sleeve</h3>
+                    <p class="price">₱699</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Knee Sleeve', '₱699', 'images/PRODUCTS/SPORTS GEAR/ultra-thin Knee Sleeve for Knee Pain_.webp')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional road cycling helmet in neon yellow">
+                    <img src="images/PRODUCTS/SPORTS GEAR/roadr-500-road-cycling-helmet-neon-yellow-van-rysel-8500015.jpg"
+                        alt="Cycling Helmet">
+                    <h3>Cycling Helmet</h3>
+                    <p class="price">₱2,500</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Cycling Helmet', '₱2,500', 'images/PRODUCTS/SPORTS GEAR/roadr-500-road-cycling-helmet-neon-yellow-van-rysel-8500015.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional sports gloves for training">
+                    <img src="images/PRODUCTS/SPORTS GEAR/sportGloves.jpg" alt="Sports Gloves">
+                    <h3>Sports Gloves</h3>
+                    <p class="price">₱500</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Sports Gloves', '₱500', 'images/PRODUCTS/SPORTS GEAR/sportGloves.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional boxing gloves for training">
+                    <img src="images/PRODUCTS/SPORTS GEAR/ergonomic-boxing-gloves-120-black-outshock-8756149.jpg"
+                        alt="Boxing Gloves">
+                    <h3>Boxing Gloves</h3>
+                    <p class="price">₱1,200</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Boxing Gloves', '₱1,200', 'images/PRODUCTS/SPORTS GEAR/ergonomic-boxing-gloves-120-black-outshock-8756149.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional boxing headgear for protection">
+                    <img src="images/PRODUCTS/SPORTS GEAR/619fbxwB-9L.jpg" alt="Boxing Headgear">
+                    <h3>Boxing Headgear</h3>
+                    <p class="price">₱1,800</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Boxing Headgear', '₱1,800', 'images/PRODUCTS/SPORTS GEAR/619fbxwB-9L.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional workout tank tops with hoodie">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Men_s Workout Tank Tops 3 Pack Sleeveless Running Shirts with Hoodie_.jpg"
+                        alt="Men's Hoodie Tank">
+                    <h3>Men's Hoodie Tank</h3>
+                    <p class="price">₱4,600</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Men\'s Hoodie Tank', '₱4,600', 'images/PRODUCTS/SPORTS GEAR/Men_s Workout Tank Tops 3 Pack Sleeveless Running Shirts with Hoodie_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional workout crop tank top for women">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Women_s Workout Crop Tank Tops Sleeveless_.jpg"
+                        alt="Women's Crop Tank">
+                    <h3>Women's Crop Tank</h3>
+                    <p class="price">₱600</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Women\'s Crop Tank', '₱600', 'images/PRODUCTS/SPORTS GEAR/Women_s Workout Crop Tank Tops Sleeveless_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional mouth guard with protective case">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Mouth Guard with Case_.jpg" alt="Mouthguard">
+                    <h3>Mouthguard</h3>
+                    <p class="price">₱300</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Mouthguard', '₱300', 'images/PRODUCTS/SPORTS GEAR/Mouth Guard with Case_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card"
+                    data-description="Professional polarized sports sunglasses with UV400 protection">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Polarized Sports Sunglasses for Men Women,Driving Fishing Cycling Mountain Bike Sunglasses UV400 Protection_.jpg"
+                        alt="Polarized Sunglasses">
+                    <h3>Polarized Sunglasses</h3>
+                    <p class="price">₱790</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Polarized Sunglasses', '₱790', 'images/PRODUCTS/SPORTS GEAR/Polarized Sports Sunglasses for Men Women,Driving Fishing Cycling Mountain Bike Sunglasses UV400 Protection_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card"
+                    data-description="Professional compression leggings for sports activities">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Compression Leggings Tights Athletic Pants Sports Base Layer_.jpg"
+                        alt="Compression Legging">
+                    <h3>Compression Legging</h3>
+                    <p class="price">₱1,000</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Compression Legging', '₱1,000', 'images/PRODUCTS/SPORTS GEAR/Compression Leggings Tights Athletic Pants Sports Base Layer_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional sports bra for women">
+                    <img src="images/PRODUCTS/SPORTS GEAR/Sports Bras for Women_.jpg" alt="Sports Bra">
+                    <h3>Sports Bra</h3>
+                    <p class="price">₱800</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Sports Bra', '₱800', 'images/PRODUCTS/SPORTS GEAR/Sports Bras for Women_.jpg')">Add
+                        to Cart</button>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+
+                <ul>
+                    <li><a href="index.html">• Home</a></li>
+                    <li><a href="product.html">• Shop</a></li>
+                    <li><a href="about.html">• About us</a></li>
+                    <li><a href="support.html">• Customer Support</a></li>
+                    <li><a href="policies.html">• Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: support@sportex.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: Lagro, Quezon City</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">• Facebook</a></li>
+                    <li><a href="#">• Instagram</a></li>
+                    <li><a href="#">• Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Sportex. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Function to handle product viewing
+        function viewProduct(name, image, price, description) {
+            // Store product details in localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify({
+                name: name,
+                image: image,
+                price: price,
+                description: description
+            }));
+
+            // Redirect to product detail page
+            window.location.href = 'product-detail.html';
+        }
+
+        // Function to handle adding products to cart
+        function addToCart(name, price, image) {
+            // Get existing cart items or initialize empty array
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add new item to cart
+            cart.push({
+                name: name,
+                price: price,
+                image: image,
+                quantity: 1
+            });
+
+            // Save updated cart
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Show confirmation message
+            alert('Product added to cart!');
+        }
+
+        // Add click event listeners to all product cards
+        document.addEventListener('DOMContentLoaded', function () {
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                card.addEventListener('click', function (e) {
+                    // Don't trigger if clicking the add to cart button
+                    if (e.target.classList.contains('add-to-cart-btn')) {
+                        return;
+                    }
+
+                    const name = this.querySelector('h3').textContent;
+                    const image = this.querySelector('img').src;
+                    const price = this.querySelector('.price').textContent;
+                    const description = this.getAttribute('data-description');
+
+                    viewProduct(name, image, price, description);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

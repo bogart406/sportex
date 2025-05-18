@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportex - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/sprtxlg.jpg" alt="Sportex Logo">
+            <span>SPORTEX</span>
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Search products...">
+        </div>
+        <div class="user-actions">
+            <a href="account-profile.html"><i class="fas fa-user"></i> Account</a>
+            <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html" class="active">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="support.html">Customer Support</a></li>
+            <li><a href="policies.html">Policies</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="products-hero">
+            <h1>Products</h1>
+            <p>Browse our collection of fitness equipment, sports gear, and accessories</p>
+        </section>
+
+        <div class="category-filters">
+            <button onclick="location.href='product.html'" class="active">Fitness Equipments</button>
+            <button onclick="location.href='sportsgear.html'">Sports Gear</button>
+            <button onclick="location.href='accessories.html'">Accessories</button>
+        </div>
+
+        <!-- Product List Section -->
+        <section class="product-list">
+            <div class="product-grid">
+                <article class="product-card" data-description="Professional jump rope for cardio training">
+                    <img src="images/bs/Jumping Rope Cable_.webp" alt="Jumping Rope Cable">
+                    <h3>Jumping Rope Cable</h3>
+                    <p class="price">₱249</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Jumping Rope Cable', '₱249', 'images/bs/Jumping Rope Cable_.webp')">Add to
+                        Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional spin bike for cardio training">
+                    <img src="images/bs/Core Spinbike YS600_.jpg" alt="Spinbike YS600">
+                    <h3>Spinbike YS600</h3>
+                    <p class="price">₱18,000</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Spinbike YS600', '₱18,000', 'images/bs/Core Spinbike YS600_.jpg')">Add to
+                        Cart</button>
+                </article>
+                <article class="product-card" data-description="Complete home workout kit with 20 accessories">
+                    <img src="images/bs/20 Fitness Accessories with Resistance Bands and Ab Roller Wheel,Full Body Workout at Home_.jpg"
+                        alt="20-in-1 Workout Kit">
+                    <h3>20-in-1 Workout Kit</h3>
+                    <p class="price">₱1,999</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('20-in-1 Workout Kit', '₱1,999', 'images/bs/20 Fitness Accessories with Resistance Bands and Ab Roller Wheel,Full Body Workout at Home_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional coated dumbbell pair">
+                    <img src="images/tn/Reebok RAWT-11156 Dumbbell Set with Case (Grey)_.jpg" alt="Dumbbell 1kg (Pair)">
+                    <h3>Dumbbell 1kg (Pair)</h3>
+                    <p class="price">₱1,000</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Dumbbell 1kg (Pair)', '₱1,000', 'images/tn/Reebok RAWT-11156 Dumbbell Set with Case (Grey)_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional hex dumbbell for strength training">
+                    <img src="images/tn/Toby_s Sports Rubber Hex Dumbbell 25 lbs_.jpg" alt="Hex Dumbbell 25 lbs">
+                    <h3>Hex Dumbbell 25 lbs</h3>
+                    <p class="price">₱1,500</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Hex Dumbbell 25 lbs', '₱1,500', 'images/tn/Toby_s Sports Rubber Hex Dumbbell 25 lbs_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional exercise ball for core training">
+                    <img src="images/tn/gymball.jpg" alt="Core Gym Ball">
+                    <h3>Core Gym Ball</h3>
+                    <p class="price">₱1,279</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Core Gym Ball', '₱1,279', 'images/tn/gymball.jpg')">Add to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional upright exercise bike">
+                    <img src="images/bs/Core Spinbike YS600_.jpg" alt="Upright Bike">
+                    <h3>Upright Bike</h3>
+                    <p class="price">₱30,549</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Upright Bike', '₱30,549', 'images/bs/Core Spinbike YS600_.jpg')">Add to
+                        Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional treadmill with advanced features">
+                    <img src="images/fp/tt.jpg" alt="Trax Treadmill">
+                    <h3>Trax Treadmill</h3>
+                    <p class="price">₱45,000</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Trax Treadmill', '₱45,000', 'images/fp/tt.jpg')">Add to Cart</button>
+                </article>
+                <article class="product-card" data-description="Complete resistance training kit">
+                    <img src="images/bs/Core Resistance Training Kit_.jpg" alt="Resistance Kit">
+                    <h3>Resistance Kit</h3>
+                    <p class="price">₱1,000</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Resistance Kit', '₱1,000', 'images/bs/Core Resistance Training Kit_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional workout bench for strength training">
+                    <img src="images/fp/Vicore Core Gym Workout Bench_.jpg" alt="Workout Bench">
+                    <h3>Workout Bench</h3>
+                    <p class="price">₱16,050</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Workout Bench', '₱16,050', 'images/fp/Vicore Core Gym Workout Bench_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional ab roller for core training">
+                    <img src="images/tn/UFCABRollerBB.jpg" alt="Ab Roller">
+                    <h3>Ab Roller</h3>
+                    <p class="price">₱1,000</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Ab Roller', '₱1,000', 'images/tn/UFCABRollerBB.jpg')">Add to Cart</button>
+                </article>
+                <article class="product-card" data-description="Premium thick yoga mat for comfort">
+                    <img src="images/bs/Thick Yoga Mat_.jpg" alt="Thick Yoga Mat">
+                    <h3>Thick Yoga Mat</h3>
+                    <p class="price">₱1,200</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Thick Yoga Mat', '₱1,200', 'images/bs/Thick Yoga Mat_.jpg')">Add to
+                        Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional ankle weights for training">
+                    <img src="images/bs/MD Buddy Ankle Weights 5 LBS_.jpg" alt="Ankle Weights 5 lbs">
+                    <h3>Ankle Weights 5 lbs</h3>
+                    <p class="price">₱1,200</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Ankle Weights 5 lbs', '₱1,200', 'images/bs/MD Buddy Ankle Weights 5 LBS_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Compact elliptical trainer for home use">
+                    <img src="images/bs/Core Mini Elliptical YME 400_.png" alt="Mini Elliptical YME400">
+                    <h3>Mini Elliptical YME400</h3>
+                    <p class="price">₱7,000</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Mini Elliptical YME400', '₱7,000', 'images/bs/Core Mini Elliptical YME 400_.png')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional dumbbell set with carrying case">
+                    <img src="images/tn/Reebok RAWT-11156 Dumbbell Set with Case (Grey)_.jpg" alt="Dumbbell Set">
+                    <h3>Dumbbell Set</h3>
+                    <p class="price">₱4,600</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Dumbbell Set', '₱4,600', 'images/tn/Reebok RAWT-11156 Dumbbell Set with Case (Grey)_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional training straps for bodyweight exercises">
+                    <img src="images/fp/Centr_Centr Bodyweight Training Straps for Core and Lower Body Exercises_.jpg"
+                        alt="Training Straps">
+                    <h3>Training Straps</h3>
+                    <p class="price">₱3,500</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Training Straps', '₱3,500', 'images/fp/Centr_Centr Bodyweight Training Straps for Core and Lower Body Exercises_.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card"
+                    data-description="Professional standard barbell plates for weight training">
+                    <img src="images/tn/barbellplate.PNG" alt="Standard Barbell Plates">
+                    <h3>Standard Barbell Plates</h3>
+                    <p class="price">₱1,100</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Standard Barbell Plates', '₱1,100', 'images/tn/barbellplate.PNG')">Add to
+                        Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional curl bar for bicep training">
+                    <img src="images/tn/curlbar.jpg" alt="Curl Bar">
+                    <h3>Curl Bar</h3>
+                    <p class="price">₱599</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Curl Bar', '₱599', 'images/tn/curlbar.jpg')">Add
+                        to Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional adjustable dumbbell set">
+                    <img src="images/tn/adjustabledumbell.PNG" alt="Adjustable Dumbbells">
+                    <h3>Adjustable Dumbbells</h3>
+                    <p class="price">₱6,999</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Adjustable Dumbbells', '₱6,999', 'images/tn/adjustabledumbell.PNG')">Add to
+                        Cart</button>
+                </article>
+                <article class="product-card" data-description="Professional barbell plate for weight training">
+                    <img src="images/tn/20lbsplate.jpg" alt="Barbell Plate 20 lbs">
+                    <h3>Barbell Plate 20 lbs</h3>
+                    <p class="price">₱499</p>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Barbell Plate 20 lbs', '₱499', 'images/tn/20lbsplate.jpg')">Add to
+                        Cart</button>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+
+                <ul>
+                    <li><a href="index.html">• Home</a></li>
+                    <li><a href="product.html">• Shop</a></li>
+                    <li><a href="about.html">• About us</a></li>
+                    <li><a href="support.html">• Customer Support</a></li>
+                    <li><a href="policies.html">• Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: support@sportex.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: Lagro, Quezon City</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">• Facebook</a></li>
+                    <li><a href="#">• Instagram</a></li>
+                    <li><a href="#">• Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Sportex. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script>
+        // Function to handle product viewing
+        function viewProduct(name, image, price, description) {
+            // Store product details in localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify({
+                name: name,
+                image: image,
+                price: price,
+                description: description
+            }));
+
+            // Redirect to product detail page
+            window.location.href = 'product-detail.html';
+        }
+
+        // Function to handle adding products to cart
+        function addToCart(name, price, image) {
+            // Get existing cart items or initialize empty array
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add new item to cart
+            cart.push({
+                name: name,
+                price: price,
+                image: image,
+                quantity: 1
+            });
+
+            // Save updated cart
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Show confirmation message
+            alert('Product added to cart!');
+        }
+
+        // Add click event listeners to all product cards
+        document.addEventListener('DOMContentLoaded', function () {
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                card.addEventListener('click', function (e) {
+                    // Don't trigger if clicking the add to cart button
+                    if (e.target.classList.contains('add-to-cart-btn')) {
+                        return;
+                    }
+
+                    const name = this.querySelector('h3').textContent;
+                    const image = this.querySelector('img').src;
+                    const price = this.querySelector('.price').textContent;
+                    const description = this.getAttribute('data-description');
+
+                    viewProduct(name, image, price, description);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
